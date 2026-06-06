@@ -1,0 +1,36 @@
+settings:
+  # Her batch'te en fazla kac blok kontrol edilip degistirilecek.
+  # Deger yukseldikce regen daha hizli biter, ama tick basina yuk daha fazla olur.
+  blocks-per-tick: 1000
+
+  # Batch'ler arasinda kac tick beklenecek.
+  # 1 = her tick islem yapar. Daha yuksek degerler lag riskini azaltir ama regen'i yavaslatir.
+  ticks-between-batches: 1
+
+  # Ayni anda en fazla kac arena yenilenebilir.
+  # Buyuk arenalarda 1 onerilir. Limit doluyken yeni regen istekleri siraya alinir.
+  max-regens-at-once: 1
+
+  # true yapilirsa hava bloklari da arena verisine kaydedilir.
+  # false onerilir; dosya boyutunu kucultur. Regen sirasinda kayitli olmayan ekstra bloklar zaten silinir.
+  save-air-blocks: false
+
+  # Blok yerlestirme/silme sirasinda Minecraft fizik guncellemeleri calissin mi?
+  # false performans icin onerilir. true kum, su, redstone vb. fizik davranislarini tetikleyebilir.
+  use-physics: false
+
+  # Gelistirme ve sorun tespiti icin ek loglar.
+  # Normal sunucularda false kalmasi onerilir.
+  debug: false
+
+arenas:
+  # Ornek arena ayari.
+  # Yeni arena /arenargen save <arenaAdi> ile kaydedilince buraya otomatik eklenir.
+  example:
+    # true ise bu arena belirlenen araliklarla otomatik yenilenir.
+    # false ise sadece /arenargen regen <arenaAdi> komutu ile yenilenir.
+    enabled: false
+
+    # Otomatik yenileme araligi, saniye cinsinden.
+    # Ornek: 300 = 5 dakika.
+    regen-interval-seconds: 300

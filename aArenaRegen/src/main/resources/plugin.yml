@@ -1,0 +1,35 @@
+name: aArenaRegen
+version: '${version}'
+
+main: herr0w.arenaregen.ArenaRegenPlugin
+api-version: '1.21.4'
+load: POSTWORLD
+author: herr0w
+commands:
+  arenargen:
+    description: Manage ArenaRegen arenas.
+    usage: /arenargen <wand|save|regen|list|delete|reload|info>
+    aliases: [aregen, arenaregen]
+permissions:
+  arenargen.admin:
+    description: Full ArenaRegen access.
+    default: op
+    children:
+      arenargen.wand: true
+      arenargen.save: true
+      arenargen.regen: true
+      arenargen.reload: true
+      arenargen.delete: true
+      arenargen.info: true
+  arenargen.wand:
+    default: op
+  arenargen.save:
+    default: op
+  arenargen.regen:
+    default: op
+  arenargen.reload:
+    default: op
+  arenargen.delete:
+    default: op
+  arenargen.info:
+    default: op
